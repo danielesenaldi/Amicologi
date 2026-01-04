@@ -215,6 +215,21 @@ footer {
     margin-right: 10px;
 }
 
+/* CENTRATURA CONTATTI */
+.contact-links-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+}
+
+.contact-links-centered .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
     .hero {
