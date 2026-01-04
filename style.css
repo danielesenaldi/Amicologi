@@ -184,7 +184,7 @@ footer {
 @media (max-width: 768px) {
     .hero {
         height: 100vh; /* Ripristinata altezza totale come prima */
-        background-position: 25% center; /* Centra l'immagine perfettamente */
+        background-position: 65% center; /* Centra l'immagine perfettamente */
         background-size: cover;
     }
 
