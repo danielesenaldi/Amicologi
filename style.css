@@ -200,6 +200,11 @@ footer {
     color: var(--primary-blue);
 }
 
+/* Colori specifici al passaggio del mouse (opzionale) */
+.fa-whatsapp { color: #25D366; }
+.fa-instagram { color: #E4405F; }
+
+
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
     .hero {
