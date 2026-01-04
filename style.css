@@ -284,25 +284,29 @@ footer {
 
     .nav-container {
         flex-direction: column;
-        padding: 10px;
+        padding: 8px; /* Ridotto leggermente */
     }
 
     .logo-img {
-        height: 45px;
-        margin-bottom: 10px;
+        height: 40px; /* Rimpicciolito per dare spazio al menu */
+        margin-bottom: 8px;
     }
 
     nav ul {
-        gap: 12px;
+        gap: 8px; /* Spazio stretto tra le voci per farle stare in linea */
+        width: 100%;
+        justify-content: center;
     }
 
     nav a {
-        font-size: 0.85rem;
-        padding: 10px 5px; /* Area di tocco più comoda per le dita */
+        font-size: 0.65rem; /* Font piccolo per evitare il rinvio a capo */
+        padding: 8px 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.3px;
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Ridotto per non essere enorme su mobile */
     }
 
     .split-layout {
@@ -311,16 +315,16 @@ footer {
     }
 
     section {
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .social-link {
-        font-size: 1rem;
+        font-size: 0.95rem;
         justify-content: center;
-        width: 100%; /* Occupa più spazio per essere cliccato meglio */
+        width: 100%;
     }
 
     .social-link:hover {
-        transform: none; /* Rimuoviamo lo spostamento laterale su mobile */
+        transform: none; 
     }
 }
