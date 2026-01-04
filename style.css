@@ -182,13 +182,20 @@ footer {
 
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
+    /* AGGIUNTO: Qui gestiamo la dimensione della foto sfondo su mobile */
+    .hero {
+        height: 50vh; /* Ridotto l'altezza: ora occupa solo metà schermo invece che tutto */
+        background-attachment: scroll; /* Migliora la fluidità su telefono */
+        background-position: center center;
+    }
+
     .nav-container {
         flex-direction: column;
         padding: 12px 10px;
     }
 
     .logo-img {
-        height: 45px; /* Riduzione logo su mobile */
+        height: 45px; 
         margin-bottom: 10px;
     }
 
@@ -197,17 +204,17 @@ footer {
     }
 
     nav a {
-        font-size: 0.75rem; /* Testo menu piccolo solo su mobile */
+        font-size: 0.75rem; 
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
 
     .hero h1 {
-        font-size: 1.8rem;
+        font-size: 1.6rem; /* Un filo più piccolo per stare in ordine */
     }
 
     h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 30px;
     }
 
@@ -218,7 +225,7 @@ footer {
     }
 
     section {
-        padding: 50px 0;
+        padding: 40px 0; /* Ridotto leggermente per compattezza */
     }
 
     .image-placeholder, .fake-map {
