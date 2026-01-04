@@ -173,8 +173,8 @@ footer {
     align-items: center;
 }
 
-.contact-info i {
-    margin-right: 15px;
+.contact-info i, .contact-links-centered i {
+    margin-right: 25px; /* Aumentato spazio a 25px come richiesto */
     color: var(--primary-blue);
     width: 25px;
     font-size: 1.2rem;
