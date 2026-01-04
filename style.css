@@ -192,6 +192,29 @@ footer {
 .fa-whatsapp { color: #25D366 !important; }
 .fa-instagram { color: #E4405F !important; }
 
+/* STILE PULSANTE GOFUNDME */
+.btn-gofundme {
+    display: inline-block;
+    background-color: #00ab6b; /* Il verde ufficiale di GoFundMe */
+    color: white;
+    padding: 15px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 171, 107, 0.3);
+}
+
+.btn-gofundme:hover {
+    background-color: #008e59;
+    transform: translateY(-3px);
+}
+
+.btn-gofundme i {
+    margin-right: 10px;
+}
+
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
     .hero {
