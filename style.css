@@ -49,12 +49,10 @@ header {
     padding: 15px 20px;
 }
 
-/* LOGO */
 .logo-img {
-    height: 65px; /* Altezza su PC */
+    height: 65px;
     width: auto;
     display: block;
-    transition: all 0.3s ease;
 }
 
 nav ul {
@@ -68,11 +66,6 @@ nav a {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s;
-    font-weight: 400;
-}
-
-nav a:hover {
-    color: var(--primary-blue);
 }
 
 /* HERO SECTION */
@@ -114,13 +107,7 @@ nav a:hover {
     padding: 12px 35px;
     border-radius: 50px;
     text-decoration: none;
-    margin-top: 20px;
     font-weight: 600;
-    transition: transform 0.2s;
-}
-
-.btn:hover {
-    transform: scale(1.05);
 }
 
 /* SEZIONI */
@@ -155,7 +142,6 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #999;
 }
 
 /* CARDS */
@@ -181,10 +167,17 @@ footer {
 }
 
 /* STILE ICONE CONTATTI */
+.contact-info p {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
 .contact-info i {
-    margin-right: 10px;
+    margin-right: 15px;
     color: var(--primary-blue);
-    width: 20px;
+    width: 25px;
+    font-size: 1.2rem;
     text-align: center;
 }
 
@@ -192,38 +185,29 @@ footer {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s;
-    display: inline-flex;
-    align-items: center;
 }
 
-.social-link:hover {
-    color: var(--primary-blue);
-}
-
-/* Colori specifici al passaggio del mouse (opzionale) */
-.fa-whatsapp { color: #25D366; }
-.fa-instagram { color: #E4405F; }
-
+.fa-whatsapp { color: #25D366 !important; }
+.fa-instagram { color: #E4405F !important; }
 
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
     .hero {
-        height: 100vh; /* Ripristinata altezza totale come prima */
-        background-position: 73% center; /* Centra l'immagine perfettamente */
-        background-size: cover;
+        height: 100vh;
+        background-position: 73% center; /* Spostata a sinistra come richiesto */
     }
 
     .hero h1 {
-        font-size: 1.8rem; /* Scritta ripristinata alla misura originale */
+        font-size: 1.8rem;
     }
 
     .nav-container {
         flex-direction: column;
-        padding: 12px 10px;
+        padding: 10px;
     }
 
     .logo-img {
-        height: 45px; 
+        height: 45px;
         margin-bottom: 10px;
     }
 
@@ -232,35 +216,24 @@ footer {
     }
 
     nav a {
-        font-size: 0.75rem; 
+        font-size: 0.75rem;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
     }
 
     h2 {
         font-size: 1.8rem;
-        margin-bottom: 30px;
     }
 
     .split-layout {
         flex-direction: column;
         text-align: center;
-        gap: 30px;
     }
 
     section {
         padding: 50px 0;
     }
 
-    .image-placeholder, .fake-map {
-        height: 250px;
-        width: 100%;
-    }
-}
-/* REGOLA PER IL TELEFONO (da inserire dentro @media) */
-@media (max-width: 768px) {
     .social-link {
-        font-size: 0.9rem; /* Testo leggermente più piccolo per stare in riga */
-        margin-bottom: 10px;
+        font-size: 0.9rem;
     }
 }
