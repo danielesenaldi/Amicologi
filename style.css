@@ -185,6 +185,8 @@ footer {
     text-decoration: none;
     color: inherit;
     transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
 }
 
 .fa-whatsapp { color: #25D366 !important; }
@@ -194,7 +196,7 @@ footer {
 @media (max-width: 768px) {
     .hero {
         height: 100vh;
-        background-position: 73% center; /* Spostata a sinistra come richiesto */
+        background-position: 73% center; 
     }
 
     .hero h1 {
