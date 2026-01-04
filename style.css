@@ -180,6 +180,26 @@ footer {
     padding: 40px 0;
 }
 
+/* STILE ICONE CONTATTI */
+.contact-info i {
+    margin-right: 10px;
+    color: var(--primary-blue);
+    width: 20px;
+    text-align: center;
+}
+
+.social-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-link:hover {
+    color: var(--primary-blue);
+}
+
 /* --- MODIFICHE SOLO PER IL TELEFONO --- */
 @media (max-width: 768px) {
     .hero {
@@ -230,5 +250,12 @@ footer {
     .image-placeholder, .fake-map {
         height: 250px;
         width: 100%;
+    }
+}
+/* REGOLA PER IL TELEFONO (da inserire dentro @media) */
+@media (max-width: 768px) {
+    .social-link {
+        font-size: 0.9rem; /* Testo leggermente più piccolo per stare in riga */
+        margin-bottom: 10px;
     }
 }
