@@ -184,7 +184,7 @@ footer {
 @media (max-width: 768px) {
     /* AGGIUNTO: Qui gestiamo la dimensione della foto sfondo su mobile */
     .hero {
-        height: 50vh; /* Ridotto l'altezza: ora occupa solo metà schermo invece che tutto */
+        height: 100vh; /* Ridotto l'altezza: ora occupa solo metà schermo invece che tutto */
         background-attachment: scroll; /* Migliora la fluidità su telefono */
         background-position: center center;
     }
