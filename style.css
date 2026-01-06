@@ -169,7 +169,10 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
     nav a { font-size: 0.8rem; }
     .hero h1 { font-size: 1.8rem; }
     .split-layout { flex-direction: column; text-align: center; }
-    .img-container { order: -1; margin-bottom: 20px; } /* Foto sopra il testo su mobile */
+    
+    /* L'immagine ora segue l'ordine del testo e si posiziona sotto */
+    .img-container { margin-top: 30px; } 
+    
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
 }
