@@ -4,7 +4,6 @@
     --light-blue: #EAF4FC;      
     --dark-blue: #2C3E50;       
     --white: #FFFFFF;
-    --accent: #81D4FA;          
     --font-main: 'Poppins', sans-serif;
 }
 
@@ -14,16 +13,13 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
+    overflow-x: hidden; /* Fondamentale per evitare bug di scorrimento laterale con le animazioni */
     scroll-behavior: smooth;
-}
-
-body {
     font-family: var(--font-main);
     color: var(--dark-blue);
     line-height: 1.6;
     background-color: var(--white);
-    overflow-x: hidden;
 }
 
 .container {
@@ -32,7 +28,7 @@ body {
     padding: 0 20px;
 }
 
-/* HEADER - COMPUTER */
+/* HEADER & NAV */
 header {
     background-color: rgba(255, 255, 255, 0.98);
     position: fixed;
@@ -46,285 +42,156 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 20px;
 }
 
 .logo-img {
-    height: 65px;
+    height: 55px;
     width: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.logo:hover .logo-img {
-    transform: scale(1.05); /* Il logo si ingrandisce leggermente al passaggio */
+    transition: transform 0.3s;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 25px;
+    gap: 20px;
 }
 
 nav a {
-    font-size: 1rem;
     text-decoration: none;
     color: inherit;
+    font-size: 0.95rem;
+    font-weight: 400;
     transition: color 0.3s;
     position: relative;
-    padding: 5px 0;
 }
 
-nav a:hover {
-    color: var(--primary-blue);
-}
+nav a:hover { color: var(--primary-blue); }
 
-/* Linea sotto i link del menu che appare al passaggio */
-nav a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: var(--primary-blue);
-    transition: width 0.3s ease;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
-
-/* HERO SECTION */
+/* HERO */
 .hero {
     height: 100vh;
-    background-image: url('tazza.jpg'); 
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    background: linear-gradient(rgba(44, 62, 80, 0.5), rgba(44, 62, 80, 0.5)), url('tazza.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: var(--white);
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(44, 62, 80, 0.5); 
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
     padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 20px;
-    font-weight: 600;
+    line-height: 1.2;
 }
 
 .btn {
     display: inline-block;
     background-color: var(--primary-blue);
     color: var(--white);
-    padding: 12px 35px;
+    padding: 14px 35px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
-.btn:hover {
-    background-color: #357ABD;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* SEZIONI */
-section {
-    padding: 100px 0;
-}
-
+/* SEZIONI GENERALI */
+section { padding: 80px 0; }
 h2 {
     text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
+    font-size: 2.2rem;
+    margin-bottom: 40px;
     color: var(--primary-blue);
 }
 
-.section-light { background-color: var(--white); }
 .section-blue { background-color: var(--light-blue); }
 
+/* LAYOUT CHI SIAMO */
 .split-layout {
     display: flex;
-    gap: 50px;
+    gap: 40px;
     align-items: center;
 }
 
-.text-block, .image-placeholder, .contact-info {
+.text-block { flex: 1; }
+.img-container {
     flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
-.image-placeholder, .fake-map {
-    background-color: #f4f4f4;
-    height: 350px;
+.img-container img {
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* CARDS */
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
 .card {
     background: var(--white);
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
 }
 
-footer {
-    background-color: var(--dark-blue);
-    color: var(--white);
-    text-align: center;
-    padding: 40px 0;
-}
-
-/* STILE ICONE CONTATTI */
-.contact-info i, .contact-links-centered i {
-    margin-right: 25px; 
-    color: var(--primary-blue);
-    width: 25px;
-    font-size: 1.2rem;
-    text-align: center;
-    transition: transform 0.3s ease;
-}
-
-.social-link {
-    text-decoration: none;
-    color: inherit;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    padding: 8px 15px; /* Aumenta l'area cliccabile */
-    border-radius: 8px;
-}
-
-.social-link:hover {
-    color: var(--primary-blue);
-    background-color: rgba(74, 144, 226, 0.05); /* Leggero sfondo al passaggio */
-    transform: translateX(5px);
-}
-
-.social-link:hover i {
-    transform: scale(1.2);
-}
-
-.fa-whatsapp { color: #25D366 !important; }
-.fa-instagram { color: #E4405F !important; }
-
-/* STILE PULSANTE GOFUNDME */
-.btn-gofundme {
-    display: inline-block;
-    background-color: #00ab6b; 
-    color: white;
-    padding: 15px 40px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.1rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 171, 107, 0.3);
-}
-
-.btn-gofundme:hover {
-    background-color: #008e59;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 171, 107, 0.4);
-}
-
-.btn-gofundme i {
-    margin-right: 10px;
-}
-
-/* Feedback al clic per tutti i pulsanti e link */
-.btn:active, .btn-gofundme:active, .social-link:active {
-    transform: scale(0.95);
-}
-
-/* CENTRATURA CONTATTI */
+/* CONTATTI */
 .contact-links-centered {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
-    font-size: 1.2rem;
+    gap: 20px;
 }
 
-/* --- MODIFICHE SOLO PER IL TELEFONO --- */
+.social-link {
+    text-decoration: none;
+    color: var(--dark-blue);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 20px;
+    transition: 0.3s;
+}
+
+.social-link:active { transform: scale(0.95); }
+.social-link i { font-size: 1.5rem; color: var(--primary-blue); }
+
+.btn-gofundme {
+    display: inline-block;
+    background-color: #00ab6b;
+    color: white;
+    padding: 16px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(0, 171, 107, 0.3);
+}
+
+footer { padding: 30px; text-align: center; background: var(--dark-blue); color: white; }
+
+/* --- MOBILE OPTIMIZATION (FONDAMENTALE) --- */
 @media (max-width: 768px) {
-    .hero {
-        height: 100vh;
-        background-position: 73% center; 
-    }
+    .nav-container { flex-direction: column; padding: 10px; }
+    .logo-img { height: 40px; margin-bottom: 10px; }
+    nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
+    nav a { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; }
 
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        padding: 8px; /* Ridotto leggermente */
-    }
-
-    .logo-img {
-        height: 40px; /* Rimpicciolito per dare spazio al menu */
-        margin-bottom: 8px;
-    }
-
-    nav ul {
-        gap: 8px; /* Spazio stretto tra le voci per farle stare in linea */
-        width: 100%;
-        justify-content: center;
-    }
-
-    nav a {
-        font-size: 0.65rem; /* Font piccolo per evitare il rinvio a capo */
-        padding: 8px 4px;
-        text-transform: uppercase;
-        letter-spacing: 0.3px;
-    }
-
-    h2 {
-        font-size: 1.6rem; /* Ridotto per non essere enorme su mobile */
-    }
-
-    .split-layout {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    section {
-        padding: 40px 0;
-    }
-
-    .social-link {
-        font-size: 0.95rem;
-        justify-content: center;
-        width: 100%;
-    }
-
-    .social-link:hover {
-        transform: none; 
-    }
+    .hero h1 { font-size: 1.8rem; }
+    
+    .split-layout { flex-direction: column; text-align: center; }
+    .img-container { order: -1; margin-bottom: 20px; } /* Immagine sopra il testo su mobile */
+    
+    section { padding: 60px 0; }
+    h2 { font-size: 1.8rem; }
+    
+    .card { padding: 25px; }
 }
