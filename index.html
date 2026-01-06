@@ -10,6 +10,8 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,16 +40,15 @@
     
     <section id="home" class="hero">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>La salute della mente
-inizia dal non sentirsi soli.</h1>
+        <div class="hero-content" data-aos="fade-in" data-aos-duration="2000">
+            <h1>La salute della mente inizia dal non sentirsi soli.</h1>
             <p>Abbiamo scelto di mettere il nostro tempo a disposizione di chi ha bisogno di un orecchio attento o di una mano tesa. Il nostro progetto nasce dal desiderio di riportare l'attenzione sull'essere umano, indipendentemente dall'età o dalla situazione.</p>
             <a href="#chi-siamo" class="btn">Scopri di più</a>
         </div>
     </section>
 
     <section id="chi-siamo" class="section-light">
-        <div class="container">
+        <div class="container" data-aos="fade-up">
             <h2>Chi Siamo</h2>
             <div class="split-layout">
                 <div class="text-block">
@@ -56,7 +57,8 @@ inizia dal non sentirsi soli.</h1>
                     <br>
                     <p><strong>Nota di trasparenza:</strong> Il nostro servizio è un supporto di tipo relazionale e di ascolto. Non si sostituisce a percorsi psicoterapeutici o psichiatrici clinici. Se identificherò bisogni che richiedono l'intervento di un professionista iscritto all'Albo, sarà mia premura consigliarti di rivolgerti a una figura specializzata.</p>
                 </div>
-                   <div class="text-block"> <img src="sabrinadaniele.png" alt="Sabrina e Daniele" style="width: 100%; height: auto; display: block;">
+                <div class="text-block" data-aos="fade-left"> 
+                    <img src="sabrinadaniele.png" alt="Sabrina e Daniele" style="width: 100%; height: auto; display: block;">
                 </div>
             </div>
         </div>
@@ -64,75 +66,3 @@ inizia dal non sentirsi soli.</h1>
 
     <section id="progetti" class="section-blue">
         <div class="container">
-            <h2>Cosa Facciamo</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <h3>Spazio di Sfoglio</h3>
-                    <p>Un tempo dedicato solo a te, per parlare di ciò che ti preme, in totale riservatezza.</p>
-                </div>
-                <div class="card">
-                    <h3>Accompagnamento Empatico</h3>
-                    <p>Affrontare insieme piccole sfide quotidiane che da soli sembrano montagne (andare a una visita, sbrigare una pratica, fare una passeggiata).</p>
-                </div>
-                <div class="card">
-                    <h3>Sostegno per Studenti e Giovani</h3>
-                    <p>Un confronto tra pari per chi vive l'ansia da prestazione o il senso di isolamento.</p>
-                </div>
-                <div class="card">
-                    <h3>La nostra Accoglienza</h3>
-                    <p>Abbiamo scelto di offrire uno spazio unico e protetto: la nostra Dimora.
-                        ​In un ambiente familiare e riservato, potrai trovare un luogo privo di giudizio dove sentirti liber* di esprimerti pienamente.
-                    <p>​Perché a casa nostra? Perché la vicinanza e l'accoglienza sono la base del supporto emotivo che offriamo, un valore aggiunto al percorso che faremo</p>
-                </div>
-                <div class="card">
-                    <h3>​Supporto da remoto</h3>
-                    <p>Per essere vicini anche da lontani, offriamo supporto anche in videochiamata dalla piattaforma dove sei più comodo tu.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-   <section id="contatti" class="section-light">
-        <div class="container" style="text-align: center;">
-            <h2>Contatti</h2>
-            <div class="contact-links-centered">
-                <p>
-                    <a href="https://wa.me/393459638216" target="_blank" class="social-link">
-                        <i class="fab fa-whatsapp"></i> +39 345 9638216
-                    </a>
-                </p>
-                
-                <p>
-                    <a href="https://www.instagram.com/amicologi_official?igsh=bnViN3djanZqOG5o" target="_blank" class="social-link">
-                        <i class="fab fa-instagram"></i> amicologi_official
-                    </a>
-                </p>
-                
-                <p class="social-link">
-                    <a href="mailto:amicologi@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i> amicologi@gmail.com
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="sostienici" class="section-blue">
-        <div class="container" style="text-align: center;">
-            <h2>Sostieni il Progetto</h2>
-            <p>Il tuo aiuto è fondamentale per permetterci di continuare a offrire supporto accessibile a tutti. Ogni contributo, anche piccolo, fa la differenza.</p>
-            <br>
-            <a href="https://gofund.me/e5cc22c6e" target="_blank" class="btn-gofundme">
-                <i class="fas fa-heart"></i> Dona su GoFundMe
-            </a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Amicologi. Tutti i diritti riservati.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
