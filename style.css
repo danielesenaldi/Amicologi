@@ -14,7 +14,7 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Fondamentale per evitare bug di scorrimento laterale con le animazioni */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     font-family: var(--font-main);
     color: var(--dark-blue);
@@ -48,7 +48,6 @@ header {
 .logo-img {
     height: 55px;
     width: auto;
-    transition: transform 0.3s;
 }
 
 nav ul {
@@ -61,9 +60,7 @@ nav a {
     text-decoration: none;
     color: inherit;
     font-size: 0.95rem;
-    font-weight: 400;
     transition: color 0.3s;
-    position: relative;
 }
 
 nav a:hover { color: var(--primary-blue); }
@@ -83,7 +80,6 @@ nav a:hover { color: var(--primary-blue); }
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 20px;
-    line-height: 1.2;
 }
 
 .btn {
@@ -94,10 +90,9 @@ nav a:hover { color: var(--primary-blue); }
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s;
 }
 
-/* SEZIONI GENERALI */
+/* SEZIONI */
 section { padding: 80px 0; }
 h2 {
     text-align: center;
@@ -108,7 +103,7 @@ h2 {
 
 .section-blue { background-color: var(--light-blue); }
 
-/* LAYOUT CHI SIAMO */
+/* CHI SIAMO */
 .split-layout {
     display: flex;
     gap: 40px;
@@ -116,17 +111,8 @@ h2 {
 }
 
 .text-block { flex: 1; }
-.img-container {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.img-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-}
+.img-container { flex: 1; display: flex; justify-content: center; }
+.img-container img { max-width: 100%; height: auto; border-radius: 20px; }
 
 /* CARDS */
 .cards-grid {
@@ -140,15 +126,14 @@ h2 {
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s;
 }
 
-/* CONTATTI */
+/* CONTATTI - COLORI RIPRISTINATI */
 .contact-links-centered {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-link {
@@ -157,13 +142,13 @@ h2 {
     font-size: 1.1rem;
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 10px 20px;
-    transition: 0.3s;
+    gap: 12px;
+    padding: 8px 0;
 }
 
-.social-link:active { transform: scale(0.95); }
-.social-link i { font-size: 1.5rem; color: var(--primary-blue); }
+.social-link.whatsapp i { color: #25D366; font-size: 1.6rem; }
+.social-link.instagram i { color: #E4405F; font-size: 1.6rem; }
+.social-link.email i { color: var(--primary-blue); font-size: 1.6rem; }
 
 .btn-gofundme {
     display: inline-block;
@@ -173,25 +158,18 @@ h2 {
     border-radius: 50px;
     text-decoration: none;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(0, 171, 107, 0.3);
 }
 
 footer { padding: 30px; text-align: center; background: var(--dark-blue); color: white; }
 
-/* --- MOBILE OPTIMIZATION (FONDAMENTALE) --- */
+/* MOBILE OPTIMIZATION */
 @media (max-width: 768px) {
-    .nav-container { flex-direction: column; padding: 10px; }
-    .logo-img { height: 40px; margin-bottom: 10px; }
-    nav ul { gap: 10px; flex-wrap: wrap; justify-content: center; }
-    nav a { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; }
-
+    .nav-container { flex-direction: column; }
+    nav ul { gap: 10px; margin-top: 10px; }
+    nav a { font-size: 0.8rem; }
     .hero h1 { font-size: 1.8rem; }
-    
     .split-layout { flex-direction: column; text-align: center; }
-    .img-container { order: -1; margin-bottom: 20px; } /* Immagine sopra il testo su mobile */
-    
+    .img-container { order: -1; margin-bottom: 20px; } /* Foto sopra il testo su mobile */
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
-    
-    .card { padding: 25px; }
 }
