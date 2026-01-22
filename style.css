@@ -1,10 +1,10 @@
 /* RESET E VARIABILI */
 :root {
     --primary-blue: #4A90E2;    
-    --light-blue: #EAF4FC;      
+    --bg-main: #e9e9da;       /* Il tuo colore crema base */
+    --bg-banner: #dcdcc3;     /* Crema leggermente più scuro per i banner */
     --dark-blue: #2C3E50;       
     --white: #FFFFFF;
-    --bg-main: #e9e9da; /* Il tuo nuovo colore crema */
     --font-main: 'Poppins', sans-serif;
 }
 
@@ -20,7 +20,7 @@ html, body {
     font-family: var(--font-main);
     color: var(--dark-blue);
     line-height: 1.6;
-    background-color: var(--bg-main); /* Sfondo generale */
+    background-color: var(--bg-main);
 }
 
 .container {
@@ -31,7 +31,7 @@ html, body {
 
 /* HEADER & NAV */
 header {
-    background-color: rgba(233, 233, 218, 0.98); /* Stesso colore crema ma leggermente trasparente */
+    background-color: rgba(233, 233, 218, 0.98); 
     position: fixed;
     width: 100%;
     top: 0;
@@ -102,9 +102,13 @@ h2 {
     color: var(--primary-blue);
 }
 
-/* Sezioni chiare usano il nuovo sfondo */
+/* Gestione Colori Sfondi */
 .section-light { background-color: var(--bg-main); }
-.section-blue { background-color: var(--light-blue); }
+
+/* Sostituito l'azzurro con il crema scuro */
+.section-blue { 
+    background-color: var(--bg-banner); 
+}
 
 /* CHI SIAMO */
 .split-layout {
@@ -129,7 +133,7 @@ h2 {
 }
 
 .card {
-    background: var(--white); /* Le card restano bianche per risaltare sullo sfondo crema */
+    background: var(--white);
     padding: 30px;
     border-radius: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
@@ -177,6 +181,7 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
     .hero h1 { font-size: 1.8rem; }
     .split-layout { flex-direction: column; text-align: center; }
     
+    /* Immagine sotto il testo */
     .img-container { margin-top: 30px; } 
     
     section { padding: 60px 0; }
