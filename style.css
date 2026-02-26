@@ -201,8 +201,8 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
     .hero h1 { font-size: 1.8rem; }
     .split-layout { flex-direction: column; text-align: center; }
     
-    /* Immagine sotto il testo */
-    .img-container { margin-top: 30px; } 
+   /* Immagine sotto il testo */
+    .img-container, .double-img-container { margin-top: 30px; }
     
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
