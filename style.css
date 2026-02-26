@@ -193,28 +193,67 @@ h2 {
 
 footer { padding: 30px; text-align: center; background: var(--dark-blue); color: white; }
 
-/* MOBILE OPTIMIZATION */
+/* --- OTTIMIZZAZIONE MOBILE --- */
 @media (max-width: 768px) {
-    .nav-container { flex-direction: column; }
-    nav ul { gap: 10px; margin-top: 10px; }
-    nav a { font-size: 0.8rem; }
+    .nav-container { 
+        flex-direction: column; 
+        padding: 10px 5px;
+    }
+
+    .logo-img {
+        height: 45px; /* Logo leggermente più piccolo */
+        margin-bottom: 10px;
+    }
+
+    nav ul { 
+        display: flex;
+        flex-wrap: wrap; /* Permette alle voci di disporsi su più righe se necessario */
+        justify-content: center;
+        gap: 8px 12px; /* Spazio ridotto tra le scritte */
+        margin-top: 5px;
+        padding: 0;
+    }
+
+    nav a { 
+        font-size: 0.75rem !important; /* Scritte più piccole per stare in fila */
+        white-space: nowrap; /* Evita che "Chi Siamo" si spezzi a metà */
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
     .hero h1 { font-size: 1.8rem; }
-    .split-layout { flex-direction: column; text-align: center; }
     
-   /* Immagine sotto il testo */
-    .img-container, .double-img-container { margin-top: 30px; }
+    .split-layout { 
+        flex-direction: column; 
+        text-align: center; 
+    }
+    
+    /* Immagini sotto il testo nei cellulari */
+    .img-container, .double-img-container { 
+        margin-top: 30px; 
+    }
     
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
 }
-/* Cambia il colore del testo e del titolo SOLO nella sezione ambiente */
-.section-green, 
-.section-green p, 
-.section-green h2 {
-    color: #FFFFFF !important; /* Verde acceso/fluo per massimo contrasto */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2); /* Leggera ombra per farlo "staccare" dallo sfondo */
+
+/* --- SEZIONE AMBIENTE (PERSONALIZZAZIONE COLORI) --- */
+
+/* Colore di sfondo della sezione */
+.section-green { 
+    background-color: #5F875F; 
 }
-/* Titolo verde scuro nella sezione ambiente */
+
+/* Testo bianco SOLO nella sezione ambiente */
+.section-green p, 
+.section-green div,
+.section-green .text-block {
+    color: #FFFFFF !important;
+}
+
+/* Titolo VERDE ACCESO SOLO nella sezione ambiente */
 .section-green h2 {
-    color: #00FF00 !important; /* Un verde foresta molto scuro per staccare dallo sfondo */
+    color: #00FF00 !important; /* Verde acceso richiesto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Ombra per renderlo leggibile */
+    margin-bottom: 30px;
 }
