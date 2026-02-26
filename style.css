@@ -211,5 +211,9 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
 .section-green, 
 .section-green p, 
 .section-green h2 {
-    color: #F4F4EB !important; /* Un bianco sporco/crema che sta bene col verde */
+    color: #FFFFFF !important; /* Un bianco sporco/crema che sta bene col verde */
+}
+/* Titolo verde scuro nella sezione ambiente */
+.section-green h2 {
+    color: #1A331B !important; /* Un verde foresta molto scuro per staccare dallo sfondo */
 }
