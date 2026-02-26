@@ -207,3 +207,9 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
 }
+/* Cambia il colore del testo e del titolo SOLO nella sezione ambiente */
+.section-green, 
+.section-green p, 
+.section-green h2 {
+    color: #F4F4EB !important; /* Un bianco sporco/crema che sta bene col verde */
+}
