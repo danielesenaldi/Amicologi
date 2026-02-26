@@ -3,6 +3,7 @@
     --primary-blue: #4A90E2;    
     --bg-main: #e9e9da;       /* Il tuo colore crema base */
     --bg-banner: #dcdcc3;     /* Crema leggermente più scuro per i banner */
+    --bg-green: #d4e7d4;
     --dark-blue: #2C3E50;       
     --white: #FFFFFF;
     --font-main: 'Poppins', sans-serif;
@@ -109,6 +110,10 @@ h2 {
 .section-blue { 
     background-color: var(--bg-banner); 
 }
+/* NUOVO: Sfondo verde per la sezione ambiente */
+.section-green { 
+    background-color: var(--bg-green);
+}    
 
 /* CHI SIAMO */
 .split-layout {
@@ -123,6 +128,21 @@ h2 {
     max-width: 100%; 
     height: auto; 
     border-radius: 20px;
+}
+/* NUOVO: STILE PER LE DOPPIE IMMAGINI DELLA SEZIONE AMBIENTE */
+.double-img-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.double-img-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* CARDS */
