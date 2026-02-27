@@ -1,9 +1,9 @@
 /* RESET E VARIABILI */
 :root {
     --primary-blue: #4A90E2;    
-    --bg-main: #e9e9da;       /* Il tuo colore crema base */
-    --bg-banner: #dcdcc3;     /* Crema leggermente più scuro per i banner */
-    --bg-green: #5E8E5E;
+    --bg-main: #e9e9da;       
+    --bg-banner: #dcdcc3;     
+    --bg-green: #5F875F;      /* Verde Salvia 5F875F */
     --dark-blue: #2C3E50;       
     --white: #FFFFFF;
     --font-main: 'Poppins', sans-serif;
@@ -105,17 +105,31 @@ h2 {
 
 /* Gestione Colori Sfondi */
 .section-light { background-color: var(--bg-main); }
+.section-blue { background-color: var(--bg-banner); }
 
-/* Sostituito l'azzurro con il crema scuro */
-.section-blue { 
-    background-color: var(--bg-banner); 
-}
-/* NUOVO: Sfondo verde per la sezione ambiente */
+/* SEZIONE AMBIENTE PERSONALIZZATA */
 .section-green { 
-    background-color: var(--bg-green);
-}    
+    background-color: var(--bg-green); 
+}
 
-/* CHI SIAMO */
+.logo-header-ambiente {
+    max-width: 140px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.section-green h2 {
+    color: #00FF00 !important; /* Verde acceso richiesto */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+}
+
+.section-green p, 
+.section-green .text-block {
+    color: #FFFFFF !important;
+}
+
+/* LAYOUT SPLIT */
 .split-layout {
     display: flex;
     gap: 40px;
@@ -128,21 +142,7 @@ h2 {
     max-width: 100%; 
     height: auto; 
     border-radius: 20px;
-}
-/* NUOVO: STILE PER LE DOPPIE IMMAGINI DELLA SEZIONE AMBIENTE */
-.double-img-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    justify-content: center;
-}
-
-.double-img-container img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 
 /* CARDS */
@@ -201,22 +201,22 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
     }
 
     .logo-img {
-        height: 45px; /* Logo leggermente più piccolo */
+        height: 45px;
         margin-bottom: 10px;
     }
 
     nav ul { 
         display: flex;
-        flex-wrap: wrap; /* Permette alle voci di disporsi su più righe se necessario */
+        flex-wrap: wrap; 
         justify-content: center;
-        gap: 8px 12px; /* Spazio ridotto tra le scritte */
+        gap: 8px 12px;
         margin-top: 5px;
         padding: 0;
     }
 
     nav a { 
-        font-size: 0.75rem !important; /* Scritte più piccole per stare in fila */
-        white-space: nowrap; /* Evita che "Chi Siamo" si spezzi a metà */
+        font-size: 0.75rem !important; 
+        white-space: nowrap; 
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -227,33 +227,15 @@ footer { padding: 30px; text-align: center; background: var(--dark-blue); color:
         flex-direction: column; 
         text-align: center; 
     }
+
+    .section-green .text-block {
+        text-align: center !important;
+    }
     
-    /* Immagini sotto il testo nei cellulari */
-    .img-container, .double-img-container { 
+    .img-container { 
         margin-top: 30px; 
     }
     
     section { padding: 60px 0; }
     h2 { font-size: 1.8rem; }
-}
-
-/* --- SEZIONE AMBIENTE (PERSONALIZZAZIONE COLORI) --- */
-
-/* Colore di sfondo della sezione */
-.section-green { 
-    background-color: #5F875F; 
-}
-
-/* Testo bianco SOLO nella sezione ambiente */
-.section-green p, 
-.section-green div,
-.section-green .text-block {
-    color: #FFFFFF !important;
-}
-
-/* Titolo VERDE ACCESO SOLO nella sezione ambiente */
-.section-green h2 {
-    color: #00FF00 !important; /* Verde acceso richiesto */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Ombra per renderlo leggibile */
-    margin-bottom: 30px;
 }
